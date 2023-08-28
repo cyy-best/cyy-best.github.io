@@ -1,3 +1,934 @@
-<p>Hello, everyone,</p>
-<p>I'm Yu Cao, welcome to my site,</p>
-<p> I am going to record my study/develope notes here.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YU CAO - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./images/my-avatar.jpg" alt="Cao Yu" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Cao Yu">Cao Yu</h1>
+          <p class="title">Software Developer<br />Frontend Web Developer</p>
+          <!-- <p class="title">Frontend Web developer</p> -->
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">ycao19@mun.ca</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+7092199898" class="contact-link">+1 (709) 219-9898</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">Oct 21, 1996</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>St John's, NL, CA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li> -->
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li> -->
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a software engineer/frontend web developer in NL, CA with 1.5 years work experience. </p>
+          <p>I worked in StateStreet bank(US) & HengTian Services LLC(CHN).
+          </p>
+
+          <p>
+            My job is to develop, test and maintain website so that it is functional and user-friendly but at the same
+            time attractive.
+            <!-- The main work contents include
+          <ul style="padding-left: 16px;">
+            <li class="about-text-list">Develop, maintain and optimize of the frontend page of the website;</li>
+            <li class="about-text-list">Testing and debug the frontend page of the website;</li>
+            <li class="about-text-list">Optimize the performance, SEO and user experience of the front page of the
+              website;</li>
+            <li class="about-text-list">Migrate and maintain database.</li>
+          </ul> -->
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What did I do</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Optimization</h4>
+
+                <p class="service-item-text">
+                  User experience improvement , and server load and response time reduction.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Database</h4>
+
+                <p class="service-item-text">
+                  Stored procedures according to requirements.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - skills
+        -->
+
+        <section class="skills service">
+
+          <h3 class="h3 skills-title">skills</h3>
+          <div class="skill-container">
+            <div class="dev-lang skill-part ">
+              <h4 class="h4">LANGUAGES</h4>
+              <ul class="skills-list has-scrollbar">
+
+                <li class="skills-item">
+                  <a href="https://www.javascript.com/" class="service-item-text">
+                    Javascript
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://html.com/" class="service-item-text">
+                    HTML5
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://www.w3.org/Style/CSS/" class="service-item-text">
+                    CSS
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://sass-lang.com/" class="service-item-text">
+                    SASS
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://lesscss.org/" class="service-item-text">
+                    LESS
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+            <div class="framewok skill-part">
+              <h4 class="h4">FRAMEWORKS</h4>
+              <ul class="skills-list has-scrollbar">
+                <li class="skills-item">
+                  <a href="https://react.dev/" class="service-item-text">
+                    React.js
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://nodejs.org/en" class="service-item-text">
+                    Node.js
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://expressjs.com/" class="service-item-text">
+                    express
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://getbootstrap.com/" class="service-item-text">
+                    bootstrap
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://jquery.com/" class="service-item-text">
+                    JQuery
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dev-tool skill-part">
+              <h4 class="h4">Developer tool</h4>
+              <ul class="skills-list has-scrollbar">
+                <li class="skills-item">
+                  <a href="https://www.linux.org/" class="service-item-text">
+                    linux
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://github.com/" class="service-item-text">
+                    git
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://aws.amazon.com/" class="service-item-text">
+                    aws
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://www.atlassian.com/software/jira" class="service-item-text">
+                    jira
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://www.oracle.com" class="service-item-text">
+                    oracle
+                  </a>
+                </li>
+
+                <li class="skills-item">
+                  <a href="https://www.snowflake.com/en/" class="service-item-text">
+                    snowflake
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+
+
+
+      <!--
+          - testimonials
+        -->
+
+
+      <!--
+          - testimonials modal
+        -->
+
+      <div class="modal-container" data-modal-container>
+
+        <div class="overlay" data-overlay></div>
+
+        <section class="testimonials-modal">
+          <button class="modal-close-btn" data-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box">
+              <img src="./images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+            </figure>
+
+            <img src="./images/icon-quote.svg" alt="quote icon">
+          </div>
+
+          <div class="modal-content">
+
+            <h4 class="h3 modal-title" data-modal-title> </h4>
+
+            <time datetime="2023-06-14"></time>
+
+            <div data-modal-text>
+              <p>
+                
+              </p>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <h3 class="timeline-item-title h3" style="margin-bottom: 20px;">Software developer @ StateStreet bank (2021.10-2023.05)</h3>
+            
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">"Storybook & Playbook" team</h4>
+
+              <p class="timeline-text">
+                Built web structure with HTML5;style the website and control the web page layout with CSS & SASS;
+                implement the
+                effect of the action and animation with REACT; set up dependencies by using npm; debug and test.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">API portal site team</h4>
+              <p class="timeline-text">
+                Built the basic website structure with HTML5,and implement every individual component with javascript
+                and JQuery, and style the webpages with CSS & LESS.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art design team</h4>
+              <p class="timeline-text">
+                Migrated all stored procedures from the Oracle database to the Snowflake database in
+                DBeaver, and rebuilds the corresponding Java code in Eclipse.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Memorial University of Newfoundland</h4>
+
+              <span>2019 - 2021</span>
+
+              <p class="timeline-text">
+                Major: Computer Engineering.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">kunming university of science and technology</h4>
+
+              <span>2015 - 2019</span>
+
+              <p class="timeline-text">
+                Major: Internet of Things
+              </p>
+
+            </li>
+
+
+          </ol>
+
+        </section>
+
+
+
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./images/xiaobin.jpg" alt="Xiaobin Shen" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Xiaobin Shen</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Yu is good at searching resources for learning or problem solving.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./images/linsen.jpg" alt="Sen Lin" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sen Lin</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Lulu has fully demonstrated her competitiveness and potential in her work.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./images/shiyang.jpg" alt="Shiyang Li" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Shiyang Li</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Lulu is good at communicating to reach agreement, When there are differences of opinion with others.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <!-- <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section> -->
+
+        <!-- <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section> -->
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
