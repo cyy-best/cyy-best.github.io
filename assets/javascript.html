@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Note</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <aside class="sidebar" data-sidebar>
+
+            <div class="sidebar-info side-nav">
+
+                <a href="#t1">Can requests initiated by JS be paused?</a>
+                <!-- <p class="title">Frontend Web developer</p> -->
+
+                <a href="#t2">Summary of commonly used shorthand techniques in JavaScript</a>
+
+            </div>
+
+        </aside>
+
+        <!-- main content -->
+
+
+        <!--
+          - skills
+        -->
+
+        <article class="about  active" data-page="about">
+
+            <h2 class="h2 article-title">
+                Javascript note
+            </h2>
+
+
+            <section class="about-text blog-text">
+                <h3 class="h3" id="t1">Can requests initiated by JS be paused?</h3>
+                <p>
+                    Implementation of "false pause" mechanism with JS
+                </p>
+                <p>If we can add a controller before the request is initiated, when the request comes back, if the
+                    controller is in a
+                    paused state, the data will not be processed, and the data will be processed after the controller
+                    resumes.
+                </p>
+                <p>Suppose we use fetch to request. We can design a controller Promise and request to be wrapped
+                    together with Promise.all.
+                    When the fetch is completed, the pause status of the controller is judged. If it is not suspended,
+                    the controller
+                    resolves directly, and the entire Promise.all also resolves and throws out.</p>
+
+                <pre class="codeedit">
+return new Promise<number>((res) => setTimeout(() => {
+    res(123)
+    }, 3000))
+    }
+
+    function createPauseControllerPromise () {
+    const result = {
+    isPause: false,
+    resolveWhenResume: false,
+    resolve (value?: any) {},
+    pause () {
+    this.isPause = true
+    },
+    resume () {
+    if (!this.isPause) return
+    this.isPause = false
+    if (this.resolveWhenResume) {
+    this.resolve()
+    }
+    },
+    promise: Promise.resolve()
+    }
+    const promise = new Promise<void>((res) => {
+        result.resolve = res
+        })
+        result.promise = promise
+
+        return result
+        }
+
+        function requestWithPauseControl <T extends ()=> Promise<any>>(request: T) {
+                const controller = createPauseControllerPromise()
+
+                const controlRequest = request().then((data) => {
+                if (!controller.isPause) controller.resolve()
+                return data
+                }).finally(() => {
+                controller.resolveWhenResume = true
+                })
+
+                const result = Promise.all([controlRequest, controller.promise]).then(data => {
+                controller.resolve()
+                return data[0]
+                });
+
+                (result as any).pause = controller.pause.bind(controller);
+                (result as any).resume = controller.resume.bind(controller);
+
+                return result as ReturnType<T> & { pause: () => void, resume: () => void }
+                    }
+                                        </pre>
+                <br>
+                <p>We can call <code>requestWithPauseControl(_request)</code> instead of
+                    <code>_request</code>, and control
+                    the pause and resume through the
+                    returned <code>pause</code> and <code>resume</code> methods
+                </p>
+                <pre class="codeedit">
+    console.log(data)
+    })
+    
+    if (Math.random() > 0.5) { result.pause() }
+    
+    setTimeout(() => {
+    result.resume()
+    }, 4000)
+</pre>
+                <address>author:xekin source:https://juejin.cn/post/7260742402397863992</address>
+            </section>
+
+
+
+            <section class="about-text blog-text">
+                <h3 class="h3" id="t2">Summary of commonly used shorthand techniques in JavaScript</h3>
+                <p>
+                    Simplify if-else with || or ?? operators
+                </p>
+                <p>Logical or operator ||, it should be noted here that 0 and '' will also be considered false</p>
+
+                <p>If the value before || is any one of 0 '' false null undefined NaN, then directly return the value
+                    after ||</p>
+
+                <pre class="codeedit">
+    function(obj){
+    var a = obj || {}
+    }
+    // =>>
+    function(obj){
+    var a;
+    if(
+    obj === 0 ||
+    obj === "" ||
+    obj === false ||
+    obj === null ||
+    obj === undefined ||
+    isNaN(obj)
+    ){
+    a = {}
+    } else {
+    a = obj;
+    }
+    }
+                </pre>
+                <br>
+
+                <address>author:xekin source:https://juejin.cn/post/7260742402397863992</address>
+            </section>
+        </article>
+    </main>
+
+
+</body>
+
+</html>

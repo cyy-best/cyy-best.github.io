@@ -358,7 +358,18 @@ main {
   gap: 15px;
 }
 
-.avatar-box {
+.side-nav {
+  width: 80%;
+  align-items: flex-start;
+}
+
+.side-nav a {
+
+  color: var(--smoky-black);
+
+}
+
+.sidebar- .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
 }
@@ -555,7 +566,19 @@ main {
   margin-bottom: 15px;
 }
 
+.about-text pre {
+  background-color: black;
+  color: var(--white-1);
+}
 
+.about-text code {
+  color: var(--bittersweet-shimmer);
+}
+
+.about-text.blog-text {
+  margin-bottom: 70px;
+  color: var(--white-1);
+}
 
 /**
  * #service 
@@ -624,6 +647,7 @@ main {
 .testimonials {
   margin-bottom: 30px;
   position: relative;
+
   .left-btn {
     position: absolute;
     top: 60%;
@@ -2133,6 +2157,7 @@ textarea.form-input::-webkit-resizer {
   .sidebar,
   article {
     width: auto;
+    min-width: 25%;
   }
 
   article {
